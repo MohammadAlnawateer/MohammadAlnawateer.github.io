@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohammad H Alnawateer – Portfolio</title>
+  <meta name="description" content="Portfolio of Mohammad H Alnawateer – IT Support, Cybersecurity, and Web Development projects." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1220;--bg-2:#0f172a;--card:#111827;--ink:#e5e7eb;--muted:#9ca3af;--brand:#0ea5e9;--accent:#22d3ee;--ring:0 0 0 3px rgba(14,165,233,.35)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;background:radial-gradient(1200px 600px at 10% -10%,rgba(34,211,238,.18),transparent),radial-gradient(900px 400px at 110% 10%,rgba(14,165,233,.16),transparent),linear-gradient(180deg,#070c19,#0b1220 40%,#0c1427 100%);color:var(--ink)}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;color:#001b2b;font-weight:800}
+    .nav a{color:var(--ink);opacity:.9}
+    .nav a:hover{opacity:1}
+    .menu{display:flex;gap:18px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03)}
+    .btn:hover{box-shadow:var(--ring)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 0}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--muted);font-size:12px}
+    h1{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:14px 0 12px}
+    .lead{color:var(--muted);font-size:clamp(14px,2.2vw,18px)}
+    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+
+    /* Sections */
+    section{padding:28px 0}
+    .section-title{font-size:22px;margin:6px 0 18px}
+    .grid{display:grid;gap:16px}
+    .grid.skills{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:16px}
+    .card:hover{transform:translateY(-2px);transition:transform .2s}
+    .muted{color:var(--muted)}
+
+    /* Projects */
+    .projects{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .project img{border-radius:12px;border:1px solid rgba(255,255,255,.08)}
+    .project h3{margin:10px 0 6px;font-size:18px}
+    .tag{display:inline-block;margin-right:6px;margin-top:8px;padding:3px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:var(--muted);font-size:12px}
+
+    /* Footer */
+    footer{padding:24px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
+
+    /* Small screens */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">MA</div>
+        <strong>Mohammad H Alnawateer</strong>
+      </div>
+      <nav class="menu">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="resume/Mohammad-Alnawateer-Resume.pdf">Download Résumé</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div>
+        <span class="pill">Applied Technology @ GCU • IT Support • Cybersecurity • Web Dev</span>
+        <h1>Hands‑on student building real projects in SQL, PHP/MySQL, and cybersecurity.</h1>
+        <p class="lead">I’m pursuing an entry‑level role in IT Support / Help Desk while growing my skills in networking, security, and backend web development. This site highlights selected coursework (AdventureWorks DW, SSMS), my PHP <em>WaiterWebsite</em>, and security labs.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">See Projects</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Quick facts</h3>
+        <ul class="muted" style="margin:0;padding-left:18px;line-height:1.8">
+          <li>Tools: SSMS, phpMyAdmin, GitHub, VS Code</li>
+          <li>Learning: CompTIA A+, VLANs & VPNs, Windows/Linux basics</li>
+          <li>Soft skills: customer service, teamwork, clear communication</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid projects">
+        <article class="card project">
+          <img src="assets/sql-ssms-screenshot.png" alt="SSMS query and results screenshot placeholder" />
+          <h3>AdventureWorksDW – Fact & Dimension Analysis</h3>
+          <p class="muted">Explored star schema concepts in SQL Server. Wrote queries against FactSales joined to Date, Product, Customer, and Store dimensions to analyze SalesAmount, Discount, and Profit.</p>
+          <code style="display:block;white-space:pre-wrap;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:10px;margin-top:10px">SELECT TOP 10 *
+FROM dw.FactSales
+ORDER BY SalesKey;</code>
+          <div>
+            <span class="tag">SQL Server</span>
+            <span class="tag">Data Warehousing</span>
+            <span class="tag">SSMS</span>
+          </div>
+        </article>
+
+        <article class="card project">
+          <img src="assets/waiterwebsite.png" alt="Screenshot of PHP WaiterWebsite app placeholder" />
+          <h3>WaiterWebsite – Tip Tracking (PHP/MySQL)</h3>
+          <p class="muted">A real‑world app used in a restaurant to track hours and tips per shift. Includes login, role‑based access, and tip‑out calculations.</p>
+          <div>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Auth</span>
+          </div>
+          <p style="margin-top:10px"><a href="#" target="_blank">View code</a></p>
+        </article>
+
+        <article class="card project">
+          <img src="assets/cyber-hashing.png" alt="Hashing lab screenshot placeholder" />
+          <h3>Cybersecurity Labs – Hashing & Email Encryption</h3>
+          <p class="muted">Generated MD5/SHA hashes and configured Thunderbird for S/MIME encrypted email. Produced step‑by‑step documentation with screenshots.</p>
+          <div>
+            <span class="tag">Security</span>
+            <span class="tag">S/MIME</span>
+            <span class="tag">MD5/SHA</span>
+          </div>
+        </article>
+      </div>
+      <p class="muted" style="margin-top:10px">Tip: replace the <code>assets/*.png</code> images with your screenshots. See “How to update” below.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="grid skills">
+        <div class="card"><strong>SQL & Data</strong><br><span class="muted">SQL Server, SSMS, AdventureWorks DW, views, indexing basics</span></div>
+        <div class="card"><strong>Web</strong><br><span class="muted">PHP, HTML, CSS, basic JS, MAMP, Hostinger, GitHub Pages</span></div>
+        <div class="card"><strong>IT Support</strong><br><span class="muted">Windows/Linux basics, BIOS/UEFI, RAID concepts, networking intro</span></div>
+        <div class="card"><strong>Security</strong><br><span class="muted">Hashing, S/MIME email, phishing awareness, VPN/VLAN basics</span></div>
+        <div class="card"><strong>Tools</strong><br><span class="muted">VS Code, Git/GitHub, phpMyAdmin, Thunderbird</span></div>
+      </div>
+    </section>
+
+    <!-- HOW TO UPDATE -->
+    <section id="howto">
+      <h2 class="section-title">How to update this site</h2>
+      <ol class="muted" style="line-height:1.9">
+        <li>Create an <code>assets/</code> folder in this repo and upload your screenshots:<br>• <code>assets/sql-ssms-screenshot.png</code><br>• <code>assets/waiterwebsite.png</code><br>• <code>assets/cyber-hashing.png</code></li>
+        <li>Replace project links (e.g., “View code”).</li>
+        <li>Put your PDF in <code>resume/</code> and update the “Download Résumé” link in the header.</li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+        <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a></p>
+        <p>GitHub: <a href="https://github.com/MohammadAlnawateer" target="_blank">github.com/MohammadAlnawateer</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="y"></span> Mohammad H Alnawateer • Built with GitHub Pages</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
