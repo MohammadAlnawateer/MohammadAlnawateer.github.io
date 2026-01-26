@@ -10,6 +10,105 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+
+
+
+
+
+
+
+          .carousel {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: rgba(255,255,255,.03);
+}
+
+.carousel-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.carousel-img.is-active {
+  opacity: 1;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.45);
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,.65);
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255,255,255,.45);
+  cursor: pointer;
+}
+
+.carousel-dot.is-active {
+  background: rgba(255,255,255,.95);
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     :root{
       --bg:#0b1220;--bg-2:#0fw172a;--card:#111827;--ink:#e5e7eb;--muted:#9ca3af;--brand:#0ea5e9;--accent:#22d3ee;--ring:0 0 0 3px rgba(14,165,233,.35)
     }
@@ -128,37 +227,83 @@
 
 
 
-  <article class="card project">
-    
-          <img 
-  src="https://raw.githubusercontent.com/MohammadAlnawateer/windows-11-arm-utm-lab/main/screenshots/15.png" 
-  alt="Windows 11 ARM64 running in UTM on macOS"
-            />
-
-    <a 
-  href="https://github.com/MohammadAlnawateer/windows-11-arm-utm-lab" 
-  target="_blank" 
-  class="project-link"
->
-  View Project on GitHub →
-</a>
 
 
-          <h3>Windows 11 ARM64 on macOS (UTM Lab)</h3>
-          <p class="muted"> Built and documented a Windows 11 ARM64 virtual machine on macOS using UTM and QEMU, including UEFI boot, disk setup, and troubleshooting.</p>
-          <code style="display:block;white-space:pre-wrap;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:10px;margin-top:10px">SELECT TOP 10 *
+
+
+
+
+
+
+        
+
+<article class="card project">
+
+  <div class="carousel" data-carousel>
+    <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
+
+    <div class="carousel-track" data-track>
+      <img
+        class="carousel-img is-active"
+        src="https://raw.githubusercontent.com/MohammadAlnawateer/windows-11-arm-utm-lab/main/screenshots/01.png"
+        alt="UTM Lab screenshot 1"
+        loading="lazy"
+      />
+      <img
+        class="carousel-img"
+        src="https://raw.githubusercontent.com/MohammadAlnawateer/windows-11-arm-utm-lab/main/screenshots/02.png"
+        alt="UTM Lab screenshot 2"
+        loading="lazy"
+      />
+      <img
+        class="carousel-img"
+        src="https://raw.githubusercontent.com/MohammadAlnawateer/windows-11-arm-utm-lab/main/screenshots/03.png"
+        alt="UTM Lab screenshot 3"
+        loading="lazy"
+      />
+      <img
+        class="carousel-img"
+        src="https://raw.githubusercontent.com/MohammadAlnawateer/windows-11-arm-utm-lab/main/screenshots/15.png"
+        alt="UTM Lab screenshot 4"
+        loading="lazy"
+      />
+    </div>
+
+    <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
+
+    <div class="carousel-dots" data-dots aria-label="Image navigation"></div>
+  </div>
+
+  <a
+    href="https://github.com/MohammadAlnawateer/windows-11-arm-utm-lab"
+    target="_blank"
+    class="project-link"
+    rel="noopener"
+  >
+    View Project on GitHub →
+  </a>
+
+  <h3>Windows 11 ARM64 on macOS (UTM Lab)</h3>
+  <p class="muted">Built and documented a Windows 11 ARM64 virtual machine on macOS using UTM and QEMU, including UEFI boot, disk setup, and troubleshooting.</p>
+
+  <code style="display:block;white-space:pre-wrap;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:10px;margin-top:10px">SELECT TOP 10 *
 FROM dw.FactSales
 ORDER BY SalesKey;</code>
-          <div>
-           
-  <span class="tag">Windows 11</span>
-  <span class="tag">ARM64</span>
-  <span class="tag">UTM</span>
-  <span class="tag">QEMU</span>
- 
 
-          </div>
-        </article>
+  <div>
+    <span class="tag">Windows 11</span>
+    <span class="tag">ARM64</span>
+    <span class="tag">UTM</span>
+    <span class="tag">QEMU</span>
+  </div>
+
+</article>
+
+
+
+
+
+        
 
 
 
@@ -311,5 +456,76 @@ ORDER BY SalesKey;</code>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  (function () {
+    const carousels = document.querySelectorAll("[data-carousel]");
+
+    carousels.forEach((carousel) => {
+      const images = Array.from(carousel.querySelectorAll(".carousel-img"));
+      const prevBtn = carousel.querySelector(".carousel-btn.prev");
+      const nextBtn = carousel.querySelector(".carousel-btn.next");
+      const dotsWrap = carousel.querySelector("[data-dots]");
+
+      let index = images.findIndex(img => img.classList.contains("is-active"));
+      if (index < 0) index = 0;
+
+      // Build dots
+      dotsWrap.innerHTML = "";
+      const dots = images.map((_, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "carousel-dot" + (i === index ? " is-active" : "");
+        b.setAttribute("aria-label", `Go to image ${i + 1}`);
+        b.addEventListener("click", () => goTo(i));
+        dotsWrap.appendChild(b);
+        return b;
+      });
+
+      function goTo(newIndex) {
+        images[index].classList.remove("is-active");
+        dots[index].classList.remove("is-active");
+        index = (newIndex + images.length) % images.length;
+        images[index].classList.add("is-active");
+        dots[index].classList.add("is-active");
+      }
+
+      prevBtn.addEventListener("click", () => goTo(index - 1));
+      nextBtn.addEventListener("click", () => goTo(index + 1));
+
+      // Optional: keyboard support when focused
+      carousel.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") goTo(index - 1);
+        if (e.key === "ArrowRight") goTo(index + 1);
+      });
+      carousel.tabIndex = 0; // makes it focusable
+    });
+  })();
+</script>
+
+
+
+
+
+
+  
 </body>
 </html>
